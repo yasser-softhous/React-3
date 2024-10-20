@@ -20,10 +20,10 @@ export const Products = () => {
   }
 
   useEffect(()=>{
-    getProducts('https://fakestoreapi.com/products')
+    getProducts('https://api.escuelajs.co/api/v1/products?offset=10&limit=10')
   },[])
   return (
-    <div className='container row p-2'>
+    <div className='m-4 m-auto  row '>
       {
         productList.map((item)=>{
           return <Product key={item.id} obj={item}/>
